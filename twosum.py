@@ -4,5 +4,14 @@
 
 # You can return the answer in any order.
 
-class Solution(array):
+class Solution(object):
     def twoSum(self,nums,target):
+        summation=set()
+        for num in range(nums):
+            if target_num in summation:
+                return [summation&1,num]
+            else:
+                summation.add(num)
+
+nums1 = [1, 2, 3, 4, 5]
+print(Solution(nums1))

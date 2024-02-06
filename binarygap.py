@@ -8,7 +8,7 @@ def solution(N):
     
     # Iterate through the binary representation
     for digit in binary:
-        if digit == '0':
+        if digit == '0':#inerates over each character in the array
             # Increment current gap length if digit is 0
             current_gap += 1
         else:
@@ -17,7 +17,10 @@ def solution(N):
             # Reset current gap length
             current_gap = 0
     
-    return max_gap
+    print("Binary representation:", binary)
+    print("Max gap:", max_gap)
+    
+    return binary,max_gap
 
 # Test the function
 print(solution(1041))  # Output should be 5
