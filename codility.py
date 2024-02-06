@@ -80,3 +80,78 @@
 # strings P and Q are made only of lowercase letters (a−z);
 # strings P and Q contain a total of at most 20 distinct letters.
 
+def generate_and_count_distinct(P, Q):
+    def generate_strings(current_string, index):
+        # Base case: if index reaches the length of P and Q, add the current string to the result
+        if index == len(P):
+            result.append(current_string)
+            return
+
+        # Add the current characters from P and Q at the index to the current string
+        generate_strings(current_string + P[index], index + 1)
+        generate_strings(current_string + Q[index], index + 1)
+
+    distinct_letters = set(P + Q)
+    distinct_count = len(distinct_letters)
+
+    result = []
+    generate_strings("", 0)
+    variations = result
+
+    return distinct_count, variations
+
+# Example usage:
+P1 = "bacad"
+Q1 = "abada"
+distinct_count1, variations1 = generate_and_count_distinct(P1, Q1)
+print("Distinct count:", distinct_count1)
+print("Variations:", variations1)
+
+P2 = "abc"
+Q2 = "bcd"
+distinct_count2, variations2 = generate_and_count_distinct(P2, Q2)
+print("Distinct count:", distinct_count2)
+print("Variations:", variations2)
+
+P3 = "amz"
+Q3 = "amz"
+distinct_count3, variations3 = generate_and_count_distinct(P3, Q3)
+print("Distinct count:", distinct_count3)
+print("Variations:", variations3)
+# def solution(string):
+#     distinct = set(string)
+#     return len(distinct)
+
+# def generate_variations(P, Q):
+#     def generate_strings(current_string, index):
+#         # Base case: if index reaches the length of P and Q, add the current string to the result
+#         if index == len(P):
+#             result.append(current_string)
+#             return
+
+#         # Add the current characters from P and Q at the index to the current string
+#         generate_strings(current_string + P[index], index + 1)
+#         generate_strings(current_string + Q[index], index + 1)
+
+#     result = []
+#     generate_strings("", 0)
+#     return result
+
+# # Example usage:
+# P1 = "bacad"
+# Q1 = "abada"
+# variations1 = generate_variations(P1, Q1)
+# distinct_counts1 = [solution(variation) for variation in variations1]
+# print("Distinct counts for each variation:", min(distinct_counts1))
+
+# P2 = "abc"
+# Q2 = "bcd"
+# variations2 = generate_variations(P2, Q2)
+# distinct_counts2 = [solution(variation) for variation in variations2]
+# print("Distinct counts for each variation:", min(distinct_counts2))
+
+# P3 = "amz"
+# Q3 = "amz"
+# variations3 = generate_variations(P3, Q3)
+# distinct_counts3 = [solution(variation) for variation in variations3]
+# print("Distinct counts for each variation:", min(distinct_counts3))
