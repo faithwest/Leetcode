@@ -24,4 +24,15 @@
 # X, Y and D are integers within the range [1..1,000,000,000];
 # X ≤ Y.
 
-def count_jumps(x,y,z)
+def solution(X, Y, D):
+    distance = Y - X
+    jumps = distance // D
+    if distance % D != 0:
+        jumps += 1
+    return jumps
+
+# Example usage:
+X = 10
+Y = 85
+D = 30
+print(solution(X, Y, D))  # Output should be 3
