@@ -11,12 +11,4 @@ payload = json.dumps({
         }
     ]
 })
-headers = {
-    'Authorization': 'App 5fc7ab255439b9869822123d397670ce-90bd0e5d-2226-4758-aadd-216c74262580',
-    'Content-Type': 'application/json',
-    'Accept': 'application/json'
-}
-conn.request("POST", "/sms/2/text/advanced", payload, headers)
-res = conn.getresponse()
-data = res.read()
-print(data.decode("utf-8"))
+("utf-8"))
