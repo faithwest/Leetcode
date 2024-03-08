@@ -24,4 +24,19 @@ print(Solution().containsDuplicate(nums1))  # Output: False
 nums2 = [1, 2, 3, 4, 1]
 print(Solution().containsDuplicate(nums2))  # Output: True
 
- 
+ def remove_sets(collection):
+    """
+    Remove sets from a collection.
+
+    Parameters:
+    collection (iterable): The collection from which sets need to be removed.
+
+    Returns:
+    list: The collection without sets.
+    """
+    return [x for x in collection if not isinstance(x, set)]
+
+# Example usage:
+collection = [1, 2, {3, 4}, 'string', {5, 6}, [7, 8], {9}]
+result = remove_sets(collection)
+print(result)  # Output: [1, 2, 'string', [7, 8], {9}]
