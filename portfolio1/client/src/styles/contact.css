@@ -1,0 +1,31 @@
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+form button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+/* contact.css */
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact form {
+  width: 80%; /* Adjust the width of the form as needed */
+  max-width: 400px; /* Set a maximum width for the form */
+}

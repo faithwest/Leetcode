@@ -1,0 +1,20 @@
+/* about.css */
+
+.about-content {
+  text-align: center; /* Center-align the contents */
+}
+
+/* Additional styling for the contents */
+.about-content img {
+  display: block; /* Ensure the image is centered properly */
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 100%; /* Ensure the image does not exceed its container's width */
+}
+
+.about-content h2 {
+  margin-top: 20px; /* Add some top margin to the heading */
+}
+
+.about-content p {
+  margin-top: 10px; /* Add some top margin to the paragraph */
+}
