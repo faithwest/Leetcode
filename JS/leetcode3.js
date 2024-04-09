@@ -49,3 +49,18 @@ console.log(maxArea(height)); // Output: 49
 // # Example usage:
 // height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
 // print(maxArea(height)) # Output: 49
+
+// Define the factorial function
+function factorial(n) {
+    // Base case: if n is 0, return 1
+    if (n === 0) {
+        return 1;
+    }
+    // Recursive case: if n is greater than 0, calculate factorial(n-1) and multiply by n
+    else {
+        return n * factorial(n - 1);
+    }
+}
+
+// Test the factorial function
+console.log("Factorial of 5:", factorial(5)); // Output should be 120
