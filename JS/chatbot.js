@@ -113,7 +113,3 @@ function removeTypingIndicator() {
     }
 }
 
-function clearChat() {
-    const chatBox = document.getElementById('chat-box');
-    chatBox.innerHTML = '';
-}
