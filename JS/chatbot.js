@@ -106,10 +106,10 @@ function addTypingIndicator() {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-function removeTypingIndicator() {
-    const typingIndicator = document.getElementById('typing-indicator');
-    if (typingIndicator) {
-        typingIndicator.remove();
-    }
-}
+// function removeTypingIndicator() {
+//     const typingIndicator = document.getElementById('typing-indicator');
+//     if (typingIndicator) {
+//         typingIndicator.remove();
+//     }
+// }
 
