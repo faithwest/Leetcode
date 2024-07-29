@@ -26,3 +26,28 @@ print(find_pairs_with_sum([2, 4, 3, 5, 7, 8, 9], 7))
 
 print(find_pairs_with_sum([1, 2, 3, 4, 3, 6], 6))  
 # Output: [(2, 4), (3, 3)]
+
+def two_sum(nums, target):
+    # Create a dictionary to store the indices of the elements
+    num_to_index = {}
+    
+    # Iterate through the list
+    for i, num in enumerate(nums):
+        # Calculate the complement
+        complement = target - num
+        
+        # Check if the complement exists in the dictionary
+        if complement in num_to_index:
+            # If it exists, return the indices
+            return [num_to_index[complement], i]
+        
+        # Otherwise, store the index of the current element
+        num_to_index[num] = i
+    
+    # If no solution is found, return an empty list
+    return []
+
+# Example usage
+nums = [2, 7, 11, 15]
+target = 9
+print(two_sum(nums, target))  # Output: [0, 1]
