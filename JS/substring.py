@@ -14,3 +14,47 @@ def length_of_longest_substring(s: str) -> int:
         max_length = max(max_length, right - left + 1)
     
     return max_length
+def length_of_longest_substring(s):
+    char_index = {}
+    max_length = 0
+    start = 0
+
+    for i, char in enumerate(s):
+        if char in char_index and char_index[char] >= start:
+            start = char_index[char] + 1
+        char_index[char] = i
+        max_length = max(max_length, i - start + 1)
+    
+    return max_length
+
+# Example usage
+s = "abcabcbb"
+print(length_of_longest_substring(s))  # Output: 3
+
+s = "bbbbb"
+print(length_of_longest_substring(s))  # Output: 1
+
+s = "pwwkew"
+print(length_of_longest_substring(s))  # Output: 3
+def length_of_longest_substring(s):
+    char_index = {}
+    max_length = 0
+    start = 0
+
+    for i, char in enumerate(s):
+        if char in char_index and char_index[char] >= start:
+            start = char_index[char] + 1
+        char_index[char] = i
+        max_length = max(max_length, i - start + 1)
+    
+    return max_length
+
+# Example usage
+s = "abcabcbb"
+print(length_of_longest_substring(s))  # Output: 3
+
+s = "bbbbb"
+print(length_of_longest_substring(s))  # Output: 1
+
+s = "pwwkew"
+print(length_of_longest_substring(s))  # Output: 3
