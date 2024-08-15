@@ -32,6 +32,29 @@
 
 // nums = [-1,1,0,-3,3]
 // print(product_except_self(nums))  # Output: [0,0,9,0,0]
+import React, { useState, useEffect } from 'react';
+
+function ExampleComponent() {
+  // Declare a state variable called 'count' with initial value 0
+  const [count, setCount] = useState(0);
+
+  // useEffect to update the document title after every render
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  }, [count]); // Dependency array: effect only runs when 'count' changes
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+export default ExampleComponent;
+
 useEffect(() => {
     const timer = setInterval(() => {
       console.log('This runs every second');
